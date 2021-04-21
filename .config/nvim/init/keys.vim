@@ -42,13 +42,13 @@ vnoremap <Down> <nop>
 " Tabs bindings
 " TODO improve on these
 " Create tab
-nnoremap <silent> <leader>o :tabnew<CR>
+nnoremap <silent> <leader>ee :tabnew<CR>
 " Close current tab
-nnoremap <silent> <leader>p :tabclose<CR>
+nnoremap <silent> <leader>ed :tabclose<CR>
 " Go to next tab
-nnoremap <silent> <leader>i :tabnext<CR>
+nnoremap <silent> <leader>el :tabnext<CR>
 " Go to previous tab
-nnoremap <silent> <leader>u :tabprevious<CR>
+nnoremap <silent> <leader>eh :tabprevious<CR>
 
 " This function allows me to switch between a dark & light theme. I mainly use
 " the dark theme, but when I'm sitting outside, the light theme can be much
