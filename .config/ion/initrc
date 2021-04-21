@@ -2,14 +2,9 @@
 let PROMPT = '${c::cyan,bold}${USER}${c::reset}\@${c::green,bold}${HOST}${c::reset}: ${c::yellow,bold}${PWD}
  ${c::0xFF}>${c::reset} '
 
-
-# Environment variables
 export EDITOR=nvim
 
-
 # Aliases
-alias mongo="docker run --rm -d -p '27017:27017' mongo:latest"
-
 ## general
 alias 'c=clear'
 alias 'e=$EDITOR'
@@ -22,6 +17,8 @@ alias 'd=docker'
 ## docker-compose
 alias 'dc=docker-compose'
 alias 'dcu=docker-compose up --detach --build && docker-compose logs --follow'
+alias 'dcb=docker-compose build'
+
 alias 'dcd=docker-compose down'
 alias 'dcl=docker-compose logs'
 
@@ -29,12 +26,11 @@ alias 'dcl=docker-compose logs'
 alias ls='lsd --color=auto'
 alias ll='lsd --color=auto --long --almost-all'
 
-
 ## Dotfiles
 alias dots="git --git-dir='$HOME/.cfg' --work-tree='$HOME'"
 
 # Update PATH
-let to_add = [ '~/.local/bin' '/home/jjr/.cargo/bin' ]
+let to_add = [ '/home/jjr/.local/bin' '/home/jjr/.cargo/bin' ]
 
 for dir in @to_add
     if exists -d "$dir"
