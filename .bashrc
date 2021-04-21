@@ -10,8 +10,16 @@ export EDITOR=nvim
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 
+# =====FUNCTIONS=====
+function print_status() {
+    if [[ $1 -ne 0 ]]; then
+        echo "$1 "
+    fi
+}
+
+
 # =====PROMPT=====
-PS1=" \e[1;33m\w\e[m \n \e[1;36m>\e[m "
+PS1=" \e[1;31m\$(print_status \$?)\e[1;33m\w\e[m \n \e[1;36m>\e[m "
 
 
 # =====EXTERNAL SCRIPTS=====
