@@ -1,0 +1,17 @@
+auto_save:
+    interval: 5000
+
+confirm_quit:
+    - "downloads"
+
+backend: "webengine"
+changelog_after_upgrade: "patch"
+
+confirm_quit:
+    - "downloads"
+
+content:
+    blocking:
+        adblock:
+            lists:
+                - "https://www.i-dont-care-about-cookies.eu/abp/"
