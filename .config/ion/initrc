@@ -1,0 +1,84 @@
+# Prompt
+let PROMPT = '${c::cyan,bold}${USER}${c::reset}\@${c::green,bold}${HOST}${c::reset}: ${c::yellow,bold}${PWD}
+ ${c::0xFF}>${c::reset} '
+
+
+# Environment variables
+export EDITOR=nvim
+
+
+# Aliases
+alias mongo="docker run --rm -d -p '27017:27017' mongo:latest"
+
+## general
+alias 'c=clear'
+alias 'e=$EDITOR'
+alias 'ec=$EDITOR ~/.config/ion/initrc'
+alias 'sc=source ~/.config/ion/initrc'
+
+## docker
+alias 'd=docker'
+ 
+## docker-compose
+alias 'dc=docker-compose'
+alias 'dcu=docker-compose up --detach --build && docker-compose logs --follow'
+alias 'dcd=docker-compose down'
+alias 'dcl=docker-compose logs'
+
+## ls
+alias ls='lsd --color=auto'
+alias ll='lsd --color=auto --long --almost-all'
+
+
+## Dotfiles
+alias dots="git --git-dir='$HOME/.cfg' --work-tree='$HOME'"
+
+# Update PATH
+let to_add = [ '~/.local/bin' '/home/jjr/.cargo/bin' ]
+
+for dir in @to_add
+    if exists -d "$dir"
+        export PATH="$dir:$PATH"
+    end
+end
+
+
+# Functions
+fn __first cmds:[str]
+    let found:int = 0
+    let status:int = 0
+
+    for cmd in @cmds
+        let parts = [ @split($cmd) ]
+
+        # If the command doesn't exist, stop here
+        if not exists -b @parts[0]
+            continue
+        end
+
+        eval "$cmd"
+        let status = $?
+        let found = 1
+    end
+
+    if "$found" -eq 1
+        return "$status"
+
+    else
+        echo "No command found." > /dev/stderr
+        return 127
+    end
+end
+
+
+# Start up tmux
+# It exists
+# if exists -b tmux && \
+#     # We're not in screen
+#     ! eq "$TERM" screen && \
+#     # We're not in tmux
+#     ! eq "$TERM"q tmux && \
+#     # We're not in Vim
+#     ! exists -s VIMRUNTIME
+#     exec tmux
+# end
