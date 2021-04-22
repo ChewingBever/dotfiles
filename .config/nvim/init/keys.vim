@@ -40,15 +40,20 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 
 " Tabs bindings
-" TODO improve on these
-" Create tab
-nnoremap <silent> <leader>ee :tabnew<CR>
+" Create tab at the end of the list
+nnoremap <silent> <leader>ee :$tabnew<CR>
+" Create tab after current tab
+nnoremap <silent> <leader>eL :tabnew<CR>
+" Create tab before current one
+nnoremap <silent> <leader>eH :-tabnew<CR>
 " Close current tab
 nnoremap <silent> <leader>ed :tabclose<CR>
 " Go to next tab
 nnoremap <silent> <leader>el :tabnext<CR>
 " Go to previous tab
 nnoremap <silent> <leader>eh :tabprevious<CR>
+" Open new tab with terminal, and switch to insert mode
+nnoremap <silent> <leader>er :tabnew<CR>:e term://$SHELL<CR>i
 
 " This function allows me to switch between a dark & light theme. I mainly use
 " the dark theme, but when I'm sitting outside, the light theme can be much
