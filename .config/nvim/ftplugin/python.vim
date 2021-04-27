@@ -1,6 +1,6 @@
 " Show a visual market at text width 80
-setlocal colorcolumn=81
+setlocal colorcolumn=80
 
 " Auto-wrap lines
-setlocal textwidth=80
+setlocal textwidth=79
 

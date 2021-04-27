@@ -1,8 +1,12 @@
 # General
-alias 'c=clear'
+alias 'clear=echo "No more clear for you"'
 alias 'e=$EDITOR'
 alias 'ec=$EDITOR ~/.bashrc'
 alias 'sc=source ~/.bashrc'
+
+# Dory can speak to whales
+alias 'whales=sudo du -sh * | sort -hk1'
+alias 'dory=sudo du -sh * | sort -hk1'
 
 # Beautiful ls
 alias ls='lsd --color=auto'
