@@ -1,5 +1,3 @@
 # Vim directory
 .vim/
 .cache/
-
-*.lock
