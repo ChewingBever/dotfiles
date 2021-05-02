@@ -55,8 +55,6 @@ Plug 'godlygeek/tabular'
 " Some auto-complete for haskell
 Plug 'neovimhaskell/haskell-vim'
 
-Plug 'vmchale/ion-vim'
-
 Plug 'Chiel92/vim-autoformat'
 
 Plug 'leafoftree/vim-vue-plugin'
@@ -64,5 +62,7 @@ Plug 'leafoftree/vim-vue-plugin'
 Plug 'othree/javascript-libraries-syntax.vim'
 
 Plug 'udalov/kotlin-vim'
+
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()

@@ -5,8 +5,8 @@ alias 'ec=$EDITOR ~/.bashrc'
 alias 'sc=source ~/.bashrc'
 
 # Dory can speak to whales
-alias 'whales=sudo du -sh * | sort -hk1'
-alias 'dory=sudo du -sh * | sort -hk1'
+alias 'whales=sudo du -sch * | sort -hk1'
+alias 'dory=sudo du -sch * | sort -hk1'
 
 # Beautiful ls
 alias ls='lsd --color=auto'
