@@ -1,6 +1,6 @@
 # =====GENERAL=====
 # Main modifier; Mod1 is alt
-set $mod Mod1
+set $mod Mod4
 
 # Modifier for floating-related operations
 floating_modifier $mod

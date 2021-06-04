@@ -65,4 +65,6 @@ Plug 'udalov/kotlin-vim'
 
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()
