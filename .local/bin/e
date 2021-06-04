@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+create_session() {
+    tmux new -ds "$1"
+
+    tmux send-keys -t "$1" 'nvim' Enter
+}
+
+# Use Git repo root as dir if we're in one
+dir=`git rev-parse --show-toplevel 2> /dev/null || pwd`
+dir_hash=`echo "$dir" | shasum | grep -o '^[^ ]\+'`
+dir_name=`basename "$dir" | sed 's/[^a-zA-Z0-9]/_/g'`
+session_name="${dir_name}-${dir_hash}"
+
+tmux has -t "$session_name" 2> /dev/null || \
+    create_session "$session_name"
+
+# Attach to the session
+if [ -n "$TMUX" ]; then
+    tmux switch-client -t "$session_name"
+else
+    tmux attach -t "$session_name"
+fi

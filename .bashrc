@@ -9,6 +9,7 @@
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 export INPUTRC="$HOME/.inputrc"
+export HISTCONTROL=ignorespace
 
 
 # =====FUNCTIONS=====

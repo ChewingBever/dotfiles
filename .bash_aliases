@@ -1,6 +1,6 @@
 # General
 alias 'clear=echo "No more clear for you"'
-alias 'e=$EDITOR'
+# alias 'e=$EDITOR'
 alias 'ec=$EDITOR ~/.bashrc'
 alias 'sc=source ~/.bashrc'
 
