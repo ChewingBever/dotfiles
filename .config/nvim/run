@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+exec docker run \
+    --rm \
+    -it \
+    --name neovim-config \
+    -v "$PWD":/root/.config/nvim \
+    archlinux:latest
