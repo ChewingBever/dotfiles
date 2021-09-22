@@ -89,10 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jjr/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
   },
-  ["impatient.nvim"] = {
-    loaded = true,
-    path = "/home/jjr/.local/share/nvim/site/pack/packer/start/impatient.nvim"
-  },
   ["material.nvim"] = {
     loaded = true,
     path = "/home/jjr/.local/share/nvim/site/pack/packer/start/material.nvim"

@@ -1,4 +1,4 @@
-require("impatient")
+-- require("impatient")
 
 -- This part auto-installs Packer if it's not present
 -- Largely inspired by https://github.com/wbthomason/packer.nvim#bootstrapping
@@ -122,7 +122,11 @@ require'lspconfig'.hls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 
 -- material
-require('material').set()
+-- require('material').set()
+-- colorscheme matieral
+-- vim.o.colors_name = "material"
+vim.cmd("colorscheme material")
+-- color material
 nmap("<leader>c", [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 
 -- nvim-lua/completion-nvim
