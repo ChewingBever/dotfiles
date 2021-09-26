@@ -120,6 +120,10 @@ require'lspconfig'.hls.setup{}
 -- Pacman: rust-analyzer
 -- GH: https://github.com/rust-analyzer/rust-analyzer
 require'lspconfig'.rust_analyzer.setup{}
+-- Installed using R shell:
+-- `install.packages('languageserver')`
+-- GH: https://github.com/REditorSupport/languageserver
+require'lspconfig'.r_language_server.setup{}
 
 -- material
 -- require('material').set()
