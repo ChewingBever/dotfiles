@@ -2,6 +2,8 @@
 
 This repo contains the various dotfiles I use on my machines.
 
+NOTE: the main repository resides [here](https://git.hackbever.be/Chewing_Bever/dotfiles).
+
 # List of contents
 
 * [`Gitignore`](.config/git/ignore): global gitignore file
