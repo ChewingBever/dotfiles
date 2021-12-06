@@ -31,14 +31,17 @@ require('packer').startup(function()
     use "neovim/nvim-lspconfig"
     -- use "hrsh7th/nvim-compe"
     use "marko-cerovac/material.nvim"
-    use "nvim-lua/completion-nvim"
-    use "steelsojka/completion-buffers"
+    use {"ms-jpq/coq_nvim", branch="coq"}
     use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
     use "akinsho/nvim-toggleterm.lua"
+    -- LaTeX editing
+    use "lervag/vimtex"
 end)
 
 
 -- =====PLUGIN CONFIGS=====
+g.coq_settings = {auto_start = "shut-up"}
+
 -- ctrlpvim/ctrlp.vim
 g.ctrlp_map = "<leader>t"
 g.ctrlp_use_caching = 1
@@ -163,7 +166,6 @@ vim.cmd("colorscheme material")
 nmap("<leader>c", [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 
 -- nvim-lua/completion-nvim
-vim.api.nvim_exec("autocmd BufEnter * lua require'completion'.on_attach()", false)
 --Use <Tab> and <S-Tab> to navigate through popup menu
 vim.api.nvim_set_keymap("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {
     expr = true
