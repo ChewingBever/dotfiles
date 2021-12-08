@@ -255,6 +255,8 @@ exec --no-startup-id /usr/bin/dunst
 # exec --no-startup-id thunderbird
 # Joplin sync
 exec --no-startup-id joplin-desktop
+exec --no-startup-id nheko
+exec --no-startup-id com.gitlab.newsflash --headless
 
 
 # =====FLOAT RULES=====
@@ -266,6 +268,7 @@ for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Gufw.py" instance="gufw.py"] floating enable
+for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 
 
 # =====COLORS=====
