@@ -1,5 +1,7 @@
 # General
 alias 'clear=echo "No more clear for you"'
+alias 'nvim=echo "Use vim!"'
+alias 'vim=command nvim'
 # alias 'e=$EDITOR'
 alias 'ec=$EDITOR ~/.bashrc'
 alias 'sc=source ~/.bashrc'
@@ -22,3 +24,6 @@ alias dcl='docker-compose logs'
 
 # Dotfile management
 alias dots="git --git-dir='$HOME/.cfg' --work-tree='$HOME'"
+
+# Add my ssh identify file to the ssh-agent
+alias ssha='eval $(ssh-agent) && ssh-add'
