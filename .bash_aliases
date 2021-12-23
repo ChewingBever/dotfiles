@@ -11,8 +11,8 @@ alias 'whales=sudo du -sch * | sort -hk1'
 alias 'dory=sudo du -sch * | sort -hk1'
 
 # Beautiful ls
-alias ls='lsd --color=auto'
-alias ll='lsd --color=auto --long --almost-all'
+alias ls='lsd --color=auto --group-dirs=first'
+alias ll='lsd --color=auto --long --almost-all --group-dirs=first'
 
 # Docker & docker-compose
 alias d=docker

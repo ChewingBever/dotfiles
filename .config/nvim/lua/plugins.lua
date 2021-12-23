@@ -82,7 +82,8 @@ g.NERDTreeIgnore = {
     '^\\.git$[[dir]]',
     '^\\.stack-work$[[dir]]', '\\.lock$',
     '^CMakeFiles$[[dir]]', '^CMakeCache.txt$[[file]]',
-    '.pdf$[[file]]'
+    '.pdf$[[file]]',
+    '^node_modules$[[dir]]'
 }
 
 g.NERDTreeShowHidden = 1
