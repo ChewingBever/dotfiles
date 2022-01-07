@@ -292,6 +292,9 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.conf 
     position bottom
     tray_output primary
+    mode hide
+    hidden_state hide
+    modifier none
     colors {
       separator          #666666
         background         #222222
@@ -302,3 +305,5 @@ bar {
         urgent_workspace   #2f343a #900000 #ffffff
     }
 }
+
+bindsym $mod+c bar hidden_state toggle
