@@ -1,4 +1,4 @@
-imap("jk", "<Esc>")
+imap("kj", "<Esc>")
 imap("<Esc>", "<nop>")
 
 -- Navigate splits
