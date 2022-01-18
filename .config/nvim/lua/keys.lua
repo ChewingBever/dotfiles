@@ -1,5 +1,8 @@
-imap("kj", "<Esc>")
-imap("<Esc>", "<nop>")
+imap("jk", "<Esc>")
+-- imap("<Esc>", "<nop>")
+
+-- vim.api.nvim_set_keymap("i", "<Esc>", "<nop>", {})
+vim.api.nvim_exec("inoremap <Esc> <nop>", false)
 
 -- Navigate splits
 nmap("<leader>h", ":wincmd h<CR>")
