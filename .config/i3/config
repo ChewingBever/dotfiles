@@ -244,7 +244,7 @@ exec --no-startup-id blueman-tray
 # Nextcloud sync
 exec --no-startup-id nextcloud
 # Compositor
-exec --no-startup-id picom --config ~/.config/picom.conf --experimental-backends
+exec --no-startup-id picom -b --config ~/.config/picom.conf --experimental-backends
 # Network Manager applet
 exec --no-startup-id nm-applet
 #set powersavings for display

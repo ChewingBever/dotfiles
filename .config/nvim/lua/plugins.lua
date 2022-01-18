@@ -104,6 +104,12 @@ require('packer').startup(function(use)
     -- LaTeX editing
     use "lervag/vimtex"
 
+    -- V support
+    use {
+        "ollykel/v-vim",
+        config = [[require('config.v')]]
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
