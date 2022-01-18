@@ -37,15 +37,18 @@ o.smartcase = true
 -- Don't highlight search results after search is finished
 o.hlsearch = false
 
+local swap_dir = vim.fn.stdpath('data') .. '/swap'
+local undo_dir = vim.fn.stdpath('data') .. '/undo'
+
 -- Create swap files
 o.swapfile = true
 -- Where to store the swap files; I store mine in the current directory
-o.directory = "./.vim/swap//"
+o.directory = swap_dir
 
 o.backup = false
 
 o.undofile = true
-o.undodir = "./.vim/undo//"
+o.undodir = undo_dir
 
 o.updatetime = 250
 

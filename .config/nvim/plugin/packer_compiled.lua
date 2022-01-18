@@ -169,11 +169,6 @@ _G.packer_plugins = {
     path = "/home/jjr/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
-  ["vim-toml"] = {
-    loaded = true,
-    path = "/home/jjr/.local/share/nvim/site/pack/packer/start/vim-toml",
-    url = "https://github.com/cespare/vim-toml"
-  },
   vimtex = {
     loaded = true,
     path = "/home/jjr/.local/share/nvim/site/pack/packer/start/vimtex",

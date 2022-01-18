@@ -10,7 +10,6 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  vim.api.nvim_command('packadd packer.nvim')
 end
 
 require('packer').startup(function()
@@ -56,9 +55,6 @@ require('packer').startup(function()
         "preservim/nerdtree",
         config = [[require('config.nerdtree')]]
     }
-
-    -- Better support for toml files
-    use "cespare/vim-toml"
 
     use "jiangmiao/auto-pairs"
 
