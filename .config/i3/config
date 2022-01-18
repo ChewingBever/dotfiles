@@ -1,6 +1,6 @@
 # =====GENERAL=====
 # Main modifier; Mod1 is alt
-set $mod Mod4
+set $mod Mod1
 
 # Modifier for floating-related operations
 floating_modifier $mod
@@ -35,7 +35,7 @@ bindsym $mod+Shift+l move right
 bindsym $mod+f fullscreen toggle
 
 # kill focused window
-bindsym $mod+x kill
+bindsym Shift+$mod+x kill
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -216,7 +216,7 @@ bindsym XF86KbdBrightnessUp exec brightnessctl --device='smc::kbd_backlight' set
 bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' set 10%-
 
 # Screenshot
-bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
+bindsym --release Print exec "scrot -fis ~/Pictures/screenshots/%Y-%m-%d-%T.png"
 
 # Show shutdown menu
 bindsym $mod+Escape exec ~/.config/i3/scripts/shutdown_menu -p rofi -c
