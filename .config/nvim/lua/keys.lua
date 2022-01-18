@@ -1,5 +1,6 @@
 imap("jk", "<Esc>")
-imap("<Esc>", "<nop>")
+
+vim.api.nvim_exec("inoremap <Esc> <nop>", false)
 
 -- Navigate splits
 nmap("<leader>h", ":wincmd h<CR>")
