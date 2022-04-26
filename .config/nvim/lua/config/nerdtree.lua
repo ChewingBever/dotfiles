@@ -4,7 +4,7 @@ g.NERDTreeIgnore = {
     '^\\.vim$[[dir]]',
     '^\\.vscode$[[dir]]', '.*\\.code-workspace$[[file]]', '^\\.idea$[[dir]]',
     '^__pycache__$[[dir]]', '^\\.pytest_cache$[[dir]]', '^venv$[[dir]]',
-        '\\.egg-info$[[dir]]', '^dist$[[dir]]', '^build$[[dir]]',
+        '\\.egg-info$[[dir]]', '^dist$[[dir]]',
         '^\\.eggs$[[dir]]',
     '^out$[[dir]]',
     '^\\.git$[[dir]]',
