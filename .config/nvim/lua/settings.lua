@@ -55,3 +55,4 @@ o.updatetime = 250
 o.shelltemp = false
 
 -- o.completeopt = "menuone,noselect"
+vim.cmd([[autocmd BufRead,BufNewFile *.v,*.vsh setlocal filetype=v]])
