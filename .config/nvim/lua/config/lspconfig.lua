@@ -9,12 +9,12 @@ local function on_attach(client, bufnr)
     -- Jump to definition
     buf_nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
     -- Format current buffer on write
-    vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
+    -- vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
     -- Show diagnostics for current line
-    buf_nmap("<leader>dd", "<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
+    buf_nmap("<leader>dd", "<Cmd>lua vim.diagnostic.open_float()<CR>")
     -- Jump between diagnostic messages
-    buf_nmap("<leader>dj", "<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
-    buf_nmap("<leader>dk", "<Cmd>lua vim.lsp.diagnostic.goto_previous()<CR>")
+    buf_nmap("<leader>dj", "<Cmd>lua vim.diagnostic.goto_next()<CR>")
+    buf_nmap("<leader>dk", "<Cmd>lua vim.diagnostic.goto_prev()<CR>")
     -- Rename symbol under cursor
     buf_nmap("<leader>dr", "<Cmd>lua vim.lsp.buf.rename()<CR>")
     -- Show hover info
@@ -38,8 +38,10 @@ require'lspconfig'.hls.setup{
 }
 -- Pacman: vieter-vls (requires my Vieter repository)
 -- GH: https://github.com/vlang/vls
-require'lspconfig'.vls.setup {
-    cmd = {'vls'}
+require'lspconfig'.vls.setup{
+    cmd = {'vls'},
+    filetypes = {'v'},
+    on_attach = on_attach
 }
 -- Pacman: rust-analyzer
 -- GH: https://github.com/rust-analyzer/rust-analyzer
