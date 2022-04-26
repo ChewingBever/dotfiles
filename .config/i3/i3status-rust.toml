@@ -38,6 +38,7 @@ label = "GTX 1060"
 show_memory = false
 show_clocks = true
 interval = 1
+if_command = "command -v nvidia-smi"
 
 [[block]]
 block = "sound"
