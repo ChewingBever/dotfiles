@@ -1,3 +1,3 @@
 local g = vim.g
 
-g.v_autofmt_bufwritepre = 1
+g.v_autofmt_bufwritepre = 0

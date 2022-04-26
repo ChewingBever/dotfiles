@@ -36,6 +36,11 @@ require'lspconfig'.hls.setup{
         }
     }
 }
+-- Pacman: vieter-vls (requires my Vieter repository)
+-- GH: https://github.com/vlang/vls
+require'lspconfig'.vls.setup {
+    cmd = {'vls'}
+}
 -- Pacman: rust-analyzer
 -- GH: https://github.com/rust-analyzer/rust-analyzer
 require'lspconfig'.rust_analyzer.setup{on_attach = on_attach}

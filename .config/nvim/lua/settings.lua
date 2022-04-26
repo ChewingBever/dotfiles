@@ -5,7 +5,7 @@ g.mapleader = " "
 g.maplocalleader = "\\<tab>"
 
 -- I often use non-standard shells that don't play nicely wiht certain features
-o.shell = "/bin/bash"
+-- o.shell = "/bin/bash"
 
 -- Centers your cursor whenever possible
 -- 999 is just a really large number (I think it's amount of lines or something)
