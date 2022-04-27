@@ -33,6 +33,12 @@ interval = 1
 format = "{utilization} {frequency}"
 
 [[block]]
+block = "temperature"
+collapsed = false
+interval = 1
+chip = "*-isa-*"
+
+[[block]]
 block = "nvidia_gpu"
 label = "GTX 1060"
 show_memory = false
