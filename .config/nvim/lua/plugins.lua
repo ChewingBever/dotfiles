@@ -97,7 +97,7 @@ require('packer').startup(function(use)
     
     -- Toggleable terminals
     use {
-        "akinsho/nvim-toggleterm.lua",
+        "akinsho/toggleterm.nvim",
         config = [[require('config.toggleterm')]]
     }
 
